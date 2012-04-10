@@ -1,5 +1,30 @@
 Application MyApp {
-    basePackage=org.uva.devoxx
+   basePackage=org.uva.devoxx
 
+  /** 
+   * DOMAINE DE LA PRESENTATION :
+   * 
+   * Une présentation pour Devoxx est l'action de présenter un sujet autour du monde Java et l'indistrualisation de l'informatique.
+   * 
+   * Le sujet de la présentation tournera autour des thèmes suivant :
+   *    - Le Web,
+   *    - Le mobile,
+   *    - Les langages alternatifs,
+   *    - Les pratiques d'entreprises,
+   *    - Java et JEE et ses architectures.
+   * 
+   * Le présentateur pourra choisir son format de présentation soit en français, soit en anglais parmi les choix suivants :
+   *    - La conférence,
+   *    - L'université,
+   *    - Les outils en action,
+   *    - Sur le pouce,
+   *    - ...
+   * 
+   * Le présentateur aura la possibilité de soumettre au maximum trois présentations et ce jusqu'au 01/03/2012.
+   * Il pourra éventuellement indiquer le type d'audience intéressé par la présentation.
+   */
+
+   Module cfp {
+   }
     
 }
