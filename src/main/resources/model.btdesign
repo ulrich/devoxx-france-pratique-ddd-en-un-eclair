@@ -26,12 +26,31 @@ Application MyApp {
 
    Module cfp {
 
+      Service PresentationService {
+         save => PresentationRepository.save;
+         delete => PresentationRepository.delete;
+         findAll => PresentationRepository.findAll;
+         findById => PresentationRepository.findById;         
+
+         findBySujet => PresentationRepository.findBySujet;
+      }
+
       Entity Presentation {
          Integer id key;
          - @Sujet sujet;
          - @Format format;
          - @Audience audience nullable;
          - @Langue langue nullable;
+
+         Repository PresentationRepository {
+            save;
+            delete;
+            findAll;
+            findById;
+            protected findByExample;
+
+            List<@Presentation> findBySujet(String terme);
+         }
       }
 
       BasicType Sujet {

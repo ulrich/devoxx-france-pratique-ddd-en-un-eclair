@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<style type="text/css" media="screen,print">   
+    	@import url("DomainModelDoc.css");
+  	</style> 
+	<title>Summary Documation of cfp module(MyApp)</title> 
+</head>
+<body>
+
+	<div id="wrap">
+  	<a name="module_cfp"></a>
+	<h1>Summary Documation of cfp module <a href="DomainModelDoc.html">(MyApp)</a></h1>
+	
+	
+	
+	<p></p>
+	
+	<div id="menu">
+			
+			<ul>
+			
+				<li><a href="DomainModelDoc-cfp.html#Audience">Audience</a></li>
+
+				<li><a href="DomainModelDoc-cfp.html#Format">Format</a></li>
+
+				<li><a href="DomainModelDoc-cfp.html#Langue">Langue</a></li>
+
+				<li><a href="DomainModelDoc-cfp.html#Presentation">Presentation</a></li>
+
+				<li><a href="DomainModelDoc-cfp.html#PresentationService">PresentationService</a></li>
+
+				<li><a href="DomainModelDoc-cfp.html#Sujet">Sujet</a></li>
+
+				<li><a href="DomainModelDoc-cfp.html#Theme">Theme</a></li>
+
+			</ul>
+
+	</div>
+
+	
+		
+	<div id="module_graph">
+	    <hr/>
+	    <p><b>All in cfp</b></p>
+		<a href="umlgraph-cfp.dot.png">
+		<img src="umlgraph-cfp.dot.png" />
+		</a>
+		<hr/>
+		<p><b>Persistent Domain in cfp</b></p>
+		<a href="umlgraph-cfp-entity.dot.png">
+		<img src="umlgraph-cfp-entity.dot.png" />
+		</a>
+	</div>
+
+	
+	
+	<div id="services">
+	<hr/>
+	
+	<a name="PresentationService"></a>
+	<h3>PresentationService</h3>
+	<p></p>
+	
+	<div id="operation">
+	<b>delete</b>
+	<p></p>
+	
+		<div id="operation_parameters">
+		<p>Parameters:</p>
+		<ul>
+		
+	<li>
+	
+		org.fornax.cartridges.sculptor.framework.errorhandling.ServiceContext
+	
+ ctx</li>
+
+	<li>
+	
+		<a href="DomainModelDoc-cfp.html#Presentation">Presentation</a>
+	
+ entity</li>
+
+		</ul>
+		</div>
+	
+	
+	</div>
+
+	<div id="operation">
+	<b>findAll</b>
+	<p></p>
+	
+		<div id="operation_parameters">
+		<p>Parameters:</p>
+		<ul>
+		
+	<li>
+	
+		org.fornax.cartridges.sculptor.framework.errorhandling.ServiceContext
+	
+ ctx</li>
+
+		</ul>
+		</div>
+	
+	
+		<div id="operation_returns">
+		<p>Returns:</p>
+		<ul><li>
+	
+		List&lt;<a href="DomainModelDoc-cfp.html#Presentation">Presentation</a>&gt;
+	
+ </li></ul>
+		</div>
+	
+	</div>
+
+	<div id="operation">
+	<b>findById</b>
+	<p></p>
+	
+		<div id="operation_parameters">
+		<p>Parameters:</p>
+		<ul>
+		
+	<li>
+	
+		org.fornax.cartridges.sculptor.framework.errorhandling.ServiceContext
+	
+ ctx</li>
+
+	<li>
+	
+		Integer
+	
+ id</li>
+
+		</ul>
+		</div>
+	
+	
+		<div id="operation_returns">
+		<p>Returns:</p>
+		<ul><li>
+	
+		<a href="DomainModelDoc-cfp.html#Presentation">Presentation</a>
+	
+ </li></ul>
+		</div>
+	
+	</div>
+
+	<div id="operation">
+	<b>findBySujet</b>
+	<p></p>
+	
+		<div id="operation_parameters">
+		<p>Parameters:</p>
+		<ul>
+		
+	<li>
+	
+		org.fornax.cartridges.sculptor.framework.errorhandling.ServiceContext
+	
+ ctx</li>
+
+	<li>
+	
+		String
+	
+ terme</li>
+
+		</ul>
+		</div>
+	
+	
+		<div id="operation_returns">
+		<p>Returns:</p>
+		<ul><li>
+	
+		List&lt;<a href="DomainModelDoc-cfp.html#Presentation">Presentation</a>&gt;
+	
+ </li></ul>
+		</div>
+	
+	</div>
+
+	<div id="operation">
+	<b>save</b>
+	<p></p>
+	
+		<div id="operation_parameters">
+		<p>Parameters:</p>
+		<ul>
+		
+	<li>
+	
+		org.fornax.cartridges.sculptor.framework.errorhandling.ServiceContext
+	
+ ctx</li>
+
+	<li>
+	
+		<a href="DomainModelDoc-cfp.html#Presentation">Presentation</a>
+	
+ entity</li>
+
+		</ul>
+		</div>
+	
+	
+		<div id="operation_returns">
+		<p>Returns:</p>
+		<ul><li>
+	
+		<a href="DomainModelDoc-cfp.html#Presentation">Presentation</a>
+	
+ </li></ul>
+		</div>
+	
+	</div>
+
+	<hr/>
+
+	</div>
+	<div id="consumers">
+	
+	</div>
+	<div id="domainObjects">
+	
+	<a name="Audience"></a>
+	<h3>Audience</h3>
+	
+	<p><i>Enum</i></p>
+
+	<p></p>
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Description</th>
+		</thead>
+
+	
+		<tr>
+			<td>DEBUTANT</td>
+			<td></td>
+		</tr>
+	
+		<tr>
+			<td>CONFIRME</td>
+			<td></td>
+		</tr>
+	
+		<tr>
+			<td>EXPERT</td>
+			<td></td>
+		</tr>
+	
+	</table>
+	<hr/>
+
+	<a name="Format"></a>
+	<h3>Format</h3>
+	
+	<p><i>Enum</i></p>
+
+	<p></p>
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Description</th>
+		</thead>
+
+	
+		<tr>
+			<td>UNIVERSITE</td>
+			<td></td>
+		</tr>
+	
+		<tr>
+			<td>CONFERENCE</td>
+			<td></td>
+		</tr>
+	
+		<tr>
+			<td>OUTILS_EN_ACTION</td>
+			<td></td>
+		</tr>
+	
+		<tr>
+			<td>SUR_LE_POUCE</td>
+			<td></td>
+		</tr>
+	
+	</table>
+	<hr/>
+
+	<a name="Langue"></a>
+	<h3>Langue</h3>
+	
+	<p><i>Enum</i></p>
+
+	<p></p>
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Description</th>
+		</thead>
+
+	
+		<tr>
+			<td>FR</td>
+			<td></td>
+		</tr>
+	
+		<tr>
+			<td>EN</td>
+			<td></td>
+		</tr>
+	
+	</table>
+	<hr/>
+
+	<a name="Presentation"></a>
+	<h3>Presentation</h3>
+	
+	<p><i>Entity</i></p>
+	
+	
+
+
+	
+
+
+
+	<p></p>
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Length</th>
+			<th>Mandatory</th>
+			<th>Changeable</th>
+			<th>Description</th>
+		</thead>
+
+	
+	
+	<tr>
+		<td>audience</td>
+		<td><a href="DomainModelDoc-cfp.html#Audience">Audience</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td></td>
+	</tr>
+			
+
+	
+	<tr>
+		<td>createdBy</td>
+		<td>String</td>
+		<td>50</td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td>
+		Information about who created the object
+</td>
+	</tr>
+			
+
+	
+	<tr>
+		<td>createdDate</td>
+		<td>java.util.Date</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td>
+		Creation timestamp of the object
+</td>
+	</tr>
+			
+
+	
+	<tr>
+		<td>format</td>
+		<td><a href="DomainModelDoc-cfp.html#Format">Format</a></td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+	</tr>
+			
+
+	
+	<tr>
+		<td><b>id</b></td>
+		<td>Integer</td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td>&nbsp;</td>
+		<td>
+		Generated unique id (GID pk)
+</td>
+	</tr>
+			
+
+	
+	<tr>
+		<td>langue</td>
+		<td><a href="DomainModelDoc-cfp.html#Langue">Langue</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td></td>
+	</tr>
+			
+
+	
+	<tr>
+		<td>lastUpdated</td>
+		<td>java.util.Date</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td>
+		Last updated timestamp of the object
+</td>
+	</tr>
+			
+
+	
+	<tr>
+		<td>lastUpdatedBy</td>
+		<td>String</td>
+		<td>50</td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td>
+		Information about who last updated the object
+</td>
+	</tr>
+			
+
+	
+	<tr>
+		<td>sujet</td>
+		<td><a href="DomainModelDoc-cfp.html#Sujet">Sujet</a></td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+	</tr>
+			
+
+	
+	<tr>
+		<td>version</td>
+		<td>Long</td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td>X</td>
+		<td>
+		Update counter used for optimistic locking
+</td>
+	</tr>
+			
+
+
+	</table>
+	
+	<hr/>
+
+	<a name="Sujet"></a>
+	<h3>Sujet</h3>
+	
+	<p><i> BasicType</i></p>
+	
+
+
+
+	<p></p>
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Length</th>
+			<th>Mandatory</th>
+			<th>Changeable</th>
+			<th>Description</th>
+		</thead>
+
+	
+	
+	<tr>
+		<td>resume</td>
+		<td>String</td>
+		<td>100</td>
+		<td>X</td>
+		<td>X</td>
+		<td>
+		
+</td>
+	</tr>
+			
+
+	
+	<tr>
+		<td>theme</td>
+		<td><a href="DomainModelDoc-cfp.html#Theme">Theme</a></td>
+		<td>&nbsp;</td>
+		<td>X</td>
+		<td>X</td>
+		<td></td>
+	</tr>
+			
+
+	
+	<tr>
+		<td>titre</td>
+		<td>String</td>
+		<td>100</td>
+		<td>X</td>
+		<td>X</td>
+		<td>
+		
+</td>
+	</tr>
+			
+
+
+	</table>
+	
+	<hr/>
+
+	<a name="Theme"></a>
+	<h3>Theme</h3>
+	
+	<p><i>Enum</i></p>
+
+	<p></p>
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Description</th>
+		</thead>
+
+	
+		<tr>
+			<td>WEB</td>
+			<td></td>
+		</tr>
+	
+		<tr>
+			<td>MOBILE</td>
+			<td></td>
+		</tr>
+	
+		<tr>
+			<td>LANGAGES_ALTERNATIFS</td>
+			<td></td>
+		</tr>
+	
+		<tr>
+			<td>PRATIQUE_ENTREPRISE</td>
+			<td></td>
+		</tr>
+	
+		<tr>
+			<td>JAVA_JEE_ARCHITECTURE</td>
+			<td></td>
+		</tr>
+	
+	</table>
+	<hr/>
+
+	</div>
+
+
+	</div>
+</body>
+</html>	
+
