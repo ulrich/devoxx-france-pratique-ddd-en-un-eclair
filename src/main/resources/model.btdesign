@@ -25,6 +25,47 @@ Application MyApp {
    */
 
    Module cfp {
+
+      Entity Presentation {
+         Integer id key;
+         - @Sujet sujet;
+         - @Format format;
+         - @Audience audience nullable;
+         - @Langue langue nullable;
+      }
+
+      BasicType Sujet {
+         not immutable
+         String titre;
+         String resume;
+        - @Theme theme;
+      }
+
+      enum Theme {
+         WEB,
+         MOBILE,
+         LANGAGES_ALTERNATIFS,
+         PRATIQUE_ENTREPRISE,
+         JAVA_JEE_ARCHITECTURE;
+      } 
+
+      enum Format {
+         Integer temps;
+
+         UNIVERSITE(240), CONFERENCE(60), OUTILS_EN_ACTION(30), SUR_LE_POUCE(15);
+      }
+
+      enum Audience {
+         DEBUTANT,
+         CONFIRME,
+         EXPERT;
+      }
+
+      enum Langue {
+         FR,
+         EN;
+      }
+
    }
     
 }
