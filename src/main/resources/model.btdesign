@@ -26,6 +26,19 @@ Application MyApp {
 
    Module cfp {
 
+      Resource PresentationResource {
+         String createForm;
+
+         show GET path="/presentation/{id}" return="/presentation/show" => PresentationService.findById;
+         showAll GET path="/presentation" return="/presentation/showlist" => PresentationService.findAll;
+
+         searchBySujet GET path="/presentation/search" return="/presentation/search";
+         showBySujet GET path="/presentation/searchsujet" return="/presentation/showlist" => PresentationService.findBySujet;
+
+         create => PresentationService.save;
+         delete return="redirect:../presentation" => PresentationService.delete;
+      }
+
       Service PresentationService {
          save => PresentationRepository.save;
          delete => PresentationRepository.delete;
