@@ -1,5 +1,6 @@
 package org.uva.devoxx.cfp.serviceapi;
 
+import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -86,5 +87,13 @@ public class PresentationServiceTest extends AbstractDbUnitJpaTests implements
 
 		assertNotNull(sujetWithDDD);
 		assertTrue(sujetWithDDD.size() > 0);
+	}
+
+	@Test
+	public void chercher_un_sujet_inconnu_doit_renvoyer_une_liste_vide() throws Exception {
+		List<Presentation> sujetWithDDD = presentationService.findBySujet(getServiceContext(), "foobar");
+
+		assertNotNull(sujetWithDDD);
+		assertEquals(0, sujetWithDDD.size());
 	}
 }
