@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<dataset>
-   <PRESENTATION
-      id="1"
-      format="OUTILS_EN_ACTION"
-      audience="DEBUTANT"
-      langue="FR"
-      SUJET_TITRE="DDD avec Sculptor"
-      SUJET_RESUME="DDD avec Sculptor"
-      SUJET_THEME="PRATIQUE_ENTREPRISE"
-      VERSION="1"/>
+<dataset> 
+  <PRESENTATION/> 
 </dataset>
