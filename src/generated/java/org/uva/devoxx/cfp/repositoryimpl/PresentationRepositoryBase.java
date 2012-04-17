@@ -2,10 +2,12 @@ package org.uva.devoxx.cfp.repositoryimpl;
 
 import org.fornax.cartridges.sculptor.framework.accessapi.DeleteAccess;
 import org.fornax.cartridges.sculptor.framework.accessapi.FindAllAccess2;
+import org.fornax.cartridges.sculptor.framework.accessapi.FindByExampleAccess2;
 import org.fornax.cartridges.sculptor.framework.accessapi.FindByIdAccess;
 import org.fornax.cartridges.sculptor.framework.accessapi.SaveAccess;
 import org.fornax.cartridges.sculptor.framework.accessimpl.jpa2.JpaDeleteAccessImpl;
 import org.fornax.cartridges.sculptor.framework.accessimpl.jpa2.JpaFindAllAccessImplGeneric;
+import org.fornax.cartridges.sculptor.framework.accessimpl.jpa2.JpaFindByExampleAccessImplGeneric;
 import org.fornax.cartridges.sculptor.framework.accessimpl.jpa2.JpaFindByIdAccessImpl;
 import org.fornax.cartridges.sculptor.framework.accessimpl.jpa2.JpaSaveAccessImpl;
 
@@ -33,6 +35,26 @@ public abstract class PresentationRepositoryBase extends JpaDaoSupport
     private EntityManager entityManager;
 
     public PresentationRepositoryBase() {
+    }
+
+    /**
+     * Delegates to {@link org.fornax.cartridges.sculptor.framework.accessapi.FindByExampleAccess}
+     */
+    protected List<Presentation> findByExample(Presentation example) {
+        return findByExample(example, getPersistentClass());
+    }
+
+    protected <R> List<R> findByExample(Presentation example,
+        Class<R> resultType) {
+        FindByExampleAccess2<Presentation, R> ao =
+            createFindByExampleAccess(Presentation.class, resultType);
+
+        ao.setExample(example);
+
+        ao.execute();
+
+        return ao.getResult();
+
     }
 
     /**
@@ -110,6 +132,16 @@ public abstract class PresentationRepositoryBase extends JpaDaoSupport
 
     protected EntityManager getEntityManager() {
         return entityManager;
+    }
+
+    protected <T, R> FindByExampleAccess2<T, R> createFindByExampleAccess(
+        Class<T> type, Class<R> resultType) {
+        JpaFindByExampleAccessImplGeneric<T, R> ao =
+            new JpaFindByExampleAccessImplGeneric<T, R>(type, resultType);
+
+        ao.setEntityManager(getEntityManager());
+
+        return ao;
     }
 
     protected SaveAccess<Presentation> createSaveAccess() {

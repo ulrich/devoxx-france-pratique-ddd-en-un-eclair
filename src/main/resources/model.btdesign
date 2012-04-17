@@ -47,6 +47,7 @@ Application MyApp {
             delete;
             findAll;
             findById;
+            protected findByExample;
 
             List<@Presentation> findBySujet(String terme);
          }

@@ -6,6 +6,6 @@
 <listEntry value="org.eclipse.ui.externaltools.launchGroup"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="/opt/build/maven/maven-3.0.3/bin/mvn"/>
-<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-e&#13;&#10;-P fornax&#13;&#10;clean&#13;&#10;install&#10;-Dmaven.test.skip=true"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="-o&#10;-e&#13;&#10;-P fornax&#13;&#10;clean&#13;&#10;install&#10;-Dmaven.test.skip=true"/>
 <stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${project_loc}"/>
 </launchConfiguration>
